@@ -1,0 +1,21 @@
+*{
+  font-family:'Courier New', Courier, monospace;
+}
+
+.containter{
+  background: #C12C43;
+
+}
+.card{
+  background-color: white;
+  color: black;
+
+}
+.dead,.act,.rec,.con{
+  width: 20%;
+  height: 20%;
+  float: left;
+}
+.row{
+ margin-left: 2%;
+}

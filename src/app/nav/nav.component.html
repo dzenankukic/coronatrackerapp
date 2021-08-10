@@ -1,0 +1,41 @@
+<div class="bg-dark-gray  text-center">
+  <ul ngbNav #nav="ngbNav" class="nav-tabs ">
+    <li ngbNavItem>
+    <a ngbNavLink class="text-dark h1">Global</a>
+    <ng-template ngbNavContent>
+
+      <p>
+           <img src="assets/img/ic1.png" class="corimg">
+      "Be fast, have no regrets... If you need to be right before you move, you will never win”
+      <img src="assets/img/ic1.png" class="corimg">
+    </p>
+      <app-home></app-home>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink class="text-dark h1">Country</a>
+    <ng-template ngbNavContent>
+      <p>
+        <img src="assets/img/ic1.png" class="corimg">
+        “It’s going to disappear. One day, it’s like a miracle, it will disappear”
+        <img src="assets/img/ic1.png" class="corimg">
+      </p>
+    <app-countryinfo></app-countryinfo>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink class="text-dark h1">Medical</a>
+    <ng-template ngbNavContent>
+      <p>
+        <img src="assets/img/ic1.png" class="corimg">
+        “It’s going to disappear. One day, it’s like a miracle, it will disappear”
+        <img src="assets/img/ic1.png" class="corimg">
+      </p>
+      <app-medical></app-medical>
+    </ng-template>
+
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2 "></div>
+</div>

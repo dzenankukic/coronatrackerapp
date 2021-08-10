@@ -1,0 +1,31 @@
+*{
+}
+.row{
+  justify-content: center;
+  background: #C12C43;
+}
+img{
+  height: 70%;
+  width: 70%;
+}
+.ic1{
+  height: 10%;
+  width: 10%;
+}
+a{
+  color: black;
+  font-size: 120%;
+}
+ngb-pagination /deep/  .page-link {
+  background-color: white;
+  color: black;
+}
+td,th{
+  color: white;
+  font-size: 150%;
+}
+table{
+  border: 3px solid white;
+ background-color: #DB324D;
+}
+
