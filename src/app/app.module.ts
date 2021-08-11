@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MedicalComponent } from './medical/medical.component';
-import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
+
 
 
 
@@ -26,9 +26,8 @@ import { CountrydetailsComponent } from './countrydetails/countrydetails.compone
     HomeComponent,
       NavComponent,
       CountryinfoComponent,
-     /* SortcountryPipe,*/
       MedicalComponent,
-      CountrydetailsComponent
+
    ],
   imports: [
     BrowserModule,
@@ -39,8 +38,8 @@ import { CountrydetailsComponent } from './countrydetails/countrydetails.compone
     NgxChartsModule,
     BrowserAnimationsModule,
     NgxPaginationModule,
-    FormsModule,//za searchbar,
- //   ParticlesModule
+    FormsModule,
+
 
 
   ],

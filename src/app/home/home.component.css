@@ -11,6 +11,13 @@
   color: black;
 
 }
+.img{
+  background-image: url(/src/assets/img/6Q6QWXKRUVGYFD3KJFXNXQIUUE.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
 .dead,.act,.rec,.con{
   width: 20%;
   height: 20%;

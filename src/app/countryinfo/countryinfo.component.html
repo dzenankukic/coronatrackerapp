@@ -4,9 +4,6 @@
 <h2 class="text-center text-white mt-3">IT's corona time</h2>
 
 
-<label for="typeahead-config" class="h2 mb-2">Search for a state:</label>
-<input id="typeahead-config" type="text" class="form-control mt-3" [(ngModel)]="model" [ngbTypeahead]="search" />
-
 <table  class="table table-striped mt-3">
   <thead>
   <tr>
@@ -14,19 +11,21 @@
     <th scope="col" onclick="ime()">Population</th>
     <th scope="col" sortable>Confirmed</th>
     <th scope="col">Recovered</th>
+    <th scope="col">Deaths</th>
     <th scope="col">Details</th>
   </tr>
   </thead>
   <tbody>
 
-  <tr *ngFor="let country of countries ; index as i " >
+  <tr *ngFor="let country of countries " >
     <th scope="row">{{ country.name }}</th>
     <td>
       {{ country.population }}
     </td>
     <td>{{ country.latest_data.confirmed }}</td>
     <td>{{ country.latest_data.recovered }}</td>
-    <td><a class="btn btn-primary" (click)="open(content,country)" >Details</a></td>
+    <td>{{ country.latest_data.deaths }}</td>
+    <td><a class="btn text-light" (click)="open(content,country)">Details</a></td>
   </tr>
   </tbody>
 </table>
@@ -38,25 +37,21 @@
   </div>
   </div>
 
-
-
   <ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">{{selectedcountry.name}} today :</h4>
+      <h4 class="modal-title" id="modal-basic-title">{{selectedcountry.code}}</h4>
       <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
-      <p>Hello, {{selectedcountry}}!</p>
-    <h5></h5>
+      <p> Selected country: {{selectedcountry.name}} </p>
+      <p>Today deaths: {{selectedcountry.today.deaths}} </p>
+      <p>Today confirmed:{{selectedcountry.today.confirmed}} </p>
 
     </div>
     <div class="modal-footer">
-    <!--<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>-->
-    <h3 class="text-dark">“Life doesn’t get easier or more forgiving, we get stronger and more resilient.”</h3>
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Close</button>
     </div>
   </ng-template>
-<!--
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
--->
+

@@ -1,8 +1,11 @@
 *{
   font-family:'Courier New', Courier, monospace;
+  background-color: #C12C43;
 }
-
-.containter{
+html,body{
+  background: #C12C43;
+}
+.con{
   background: #C12C43;
 
 }
